@@ -8,33 +8,28 @@
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 <body>
-    <div class="container">
-        <!-- Back to Dashboard Link -->
-        <p><a href="/myapp/dashboard/">&lt;&lt; Back to Dashboard</a></p>
-
-        <!-- Page Title -->
-        <h2>Edit Employee Details</h2>
-
-        <!-- Edit Employee Form -->
-        <form action="/myapp/edit_emp/" method="POST">
-            {% csrf_token %}
-            <input type="hidden" id="id" name="id" value="{{ id }}">
-
-            <!-- Name Field -->
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" value="{{ name }}">
-
-            <!-- Age Field -->
-            <label for="age">Age:</label>
-            <input type="text" id="age" name="age" value="{{ age }}">
-
-            <!-- Unit Field -->
-            <label for="unit">Unit:</label>
-            <input type="text" id="unit" name="unit" value="{{ unit }}">
-
-            <!-- Submit Button -->
-            <input type="submit" value="Submit">
-        </form>
+<div class="container">
+    <div class="navigation">
+        <a href="/myapp/dashboard/" class="btn">Back to Dashboard</a>
     </div>
+
+    <h2>Edit Employee Details</h2>
+
+    <form action="/myapp/edit_emp/" method="POST" class="employee-form">
+        {% csrf_token %}
+        <input type="hidden" id="id" name="id" value="{{ id }}">
+
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" value="{{ name }}">
+
+        <label for="age">Age:</label>
+        <input type="text" id="age" name="age" value="{{ age }}">
+
+        <label for="unit">Unit:</label>
+        <input type="text" id="unit" name="unit" value="{{ unit }}">
+
+        <button type="submit">Submit</button>
+    </form>
+</div>
 </body>
 </html>
