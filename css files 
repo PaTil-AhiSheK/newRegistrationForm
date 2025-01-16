@@ -1,105 +1,142 @@
-/* General Styles */
+/* General Styles for All Pages */
 body {
     font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
     margin: 0;
     padding: 0;
-    background-color: #f9f9f9;
-    color: #333;
 }
 
 .container {
     max-width: 800px;
     margin: 20px auto;
+    background: #fff;
     padding: 20px;
-    background-color: #fff;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-h1, h2 {
+h1 {
     text-align: center;
-    color: #444;
+    color: #333;
+    margin-bottom: 20px;
 }
 
-/* Form Styling */
-form {
+h2 {
+    color: #555;
+    margin-bottom: 15px;
+}
+
+/* Navigation Styles */
+.navigation {
+    text-align: right;
+    margin-bottom: 20px;
+}
+
+.navigation .btn,
+button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 8px 12px;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+}
+
+.navigation .btn:hover,
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Table Styles (Index Page) */
+.employee-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.employee-table th,
+.employee-table td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+    font-size: 14px;
+}
+
+.employee-table th {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.employee-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.employee-table tr:hover {
+    background-color: #e6f7ff;
+}
+
+/* Form Styles (Index and Edit Pages) */
+.employee-form {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 15px;
 }
 
 label {
-    font-weight: bold;
-    margin-bottom: 5px;
+    font-size: 16px;
+    color: #555;
 }
 
 input[type="text"],
-input[type="number"],
-input[type="submit"] {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
+input[type="number"] {
     width: 100%;
-    box-sizing: border-box;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
 }
 
-input[type="submit"] {
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+button {
     background-color: #28a745;
     color: #fff;
+    border: none;
+    padding: 10px 15px;
+    font-size: 14px;
+    border-radius: 4px;
     cursor: pointer;
-    font-weight: bold;
 }
 
-input[type="submit"]:hover {
+button:hover {
     background-color: #218838;
 }
 
-/* Back Link */
-a {
-    color: #007bff;
-    text-decoration: none;
-    font-size: 14px;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-/* Table Styling */
-table {
-    width: 100%;
-    border-collapse: collapse;
+/* Graphs Container (Statistics Page) */
+.graph-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
     margin-top: 20px;
 }
 
-th, td {
+.graph {
+    width: 45%;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
     padding: 10px;
-    text-align: left;
-    border: 1px solid #ddd;
 }
 
-th {
-    background-color: #f4f4f4;
-    font-weight: bold;
-}
-
-/* Buttons and Navigation */
-.navigation, .btn {
-    text-align: center;
-    margin: 20px 0;
-}
-
-.btn {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
-    font-size: 14px;
-}
-
-.btn:hover {
-    background-color: #0056b3;
+.graph img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
 }
