@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Statistics</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1>Employee Statistics</h1>
+
+        <!-- Back to Dashboard Button -->
+        <div class="navigation">
+            <a href="/myapp/dashboard/" class="btn">Back to Dashboard</a>
+        </div>
+
+        <!-- Graphs -->
+        <div class="charts-container">
+            <div class="chart">
+                <img src="{% static 'graphs/unit_distribution.png' %}" alt="Unit Distribution">
+            </div>
+            <div class="chart">
+                <img src="{% static 'graphs/age_distribution.png' %}" alt="Age Distribution">
+            </div>
+            <div class="chart">
+                <img src="{% static 'graphs/other_graph_1.png' %}" alt="Other Graph 1">
+            </div>
+            <div class="chart">
+                <img src="{% static 'graphs/other_graph_2.png' %}" alt="Other Graph 2">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
