@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Statistics</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1>Employee Statistics</h1>
+
+        <div class="statistics-chart">
+            <h2>Employee Count by Unit</h2>
+            <img src="data:image/png;base64,{{ unit_chart }}" alt="Unit Count Chart">
+
+            <h2>Employee Age Distribution</h2>
+            <img src="data:image/png;base64,{{ age_chart }}" alt="Age Distribution Chart">
+        </div>
+
+        <div class="navigation">
+            <a href="/myapp/dashboard/" class="btn">Back to Dashboard</a>
+        </div>
+    </div>
+</body>
+</html>
