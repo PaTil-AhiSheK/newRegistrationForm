@@ -11,10 +11,24 @@
     <div class="container">
         <h1>Employee Dashboard</h1>
 
-        <!-- Navigation -->
-        <div class="navigation">
-            <a href="/myapp/statistics/" class="btn">View Statistics</a>
-        </div>
+        <!-- Add Employee Form -->
+        <h2>Add Employee</h2>
+        <form method="POST" action="/myapp/dashboard/" class="employee-form">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="age">Age:</label>
+                <input type="number" id="age" name="age" required>
+            </div>
+            <div class="form-group">
+                <label for="unit">Unit:</label>
+                <input type="text" id="unit" name="unit" required>
+            </div>
+            <button type="submit" class="btn">Add Employee</button>
+        </form>
 
         <!-- Employee Table -->
         <h2>Employee List</h2>
@@ -47,24 +61,10 @@
             </tbody>
         </table>
 
-        <!-- Add Employee Form -->
-        <h2>Add Employee</h2>
-        <form method="POST" action="/myapp/dashboard/" class="employee-form">
-            {% csrf_token %}
-            <div class="form-group">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-            </div>
-            <div class="form-group">
-                <label for="age">Age:</label>
-                <input type="number" id="age" name="age" required>
-            </div>
-            <div class="form-group">
-                <label for="unit">Unit:</label>
-                <input type="text" id="unit" name="unit" required>
-            </div>
-            <button type="submit" class="btn">Add Employee</button>
-        </form>
+        <!-- Navigation -->
+        <div class="navigation">
+            <a href="/myapp/statistics/" class="btn">View Statistics</a>
+        </div>
     </div>
 </body>
 </html>
